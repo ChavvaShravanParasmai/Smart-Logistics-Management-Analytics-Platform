@@ -16,7 +16,7 @@ cursor = connection.cursor()
 # ============================================================
 
 data = pd.read_json(
-    r"C:\Users\shrav\OneDrive\Desktop\Smart Logistics Management & Analytics Platform\Datasets\shipments.json"
+    r"shipments.json"
 )
 data = data.where(pd.notna(data), None)
 data = data.drop_duplicates(subset=["shipment_id"])
@@ -61,7 +61,7 @@ for _, row in data.iterrows():
 # ============================================================
 
 csv_data = pd.read_csv(
-    r"C:\Users\shrav\OneDrive\Desktop\Smart Logistics Management & Analytics Platform\Datasets\shipment_tracking.csv"
+    r"shipment_tracking.csv"
 )
 csv_data = csv_data.where(pd.notna(csv_data), None)
 csv_data = csv_data.drop_duplicates(subset=["tracking_id"])
@@ -97,7 +97,7 @@ for _, row in csv_data.iterrows():
 # ============================================================
 
 staff = pd.read_csv(
-    r"C:\Users\shrav\OneDrive\Desktop\Smart Logistics Management & Analytics Platform\Datasets\courier_staff.csv"
+    r"courier_staff.csv"
 )
 staff = staff.where(pd.notna(staff), None)
 
@@ -130,7 +130,7 @@ for _, row in staff.iterrows():
 # ============================================================
 
 routes = pd.read_csv(
-    r"C:\Users\shrav\OneDrive\Desktop\Smart Logistics Management & Analytics Platform\Datasets\routes.csv"
+    r"routes.csv"
 )
 routes = routes.where(pd.notna(routes), None)
 
@@ -165,7 +165,7 @@ for _, row in routes.iterrows():
 # ============================================================
 
 warehouse = pd.read_json(
-    r"C:\Users\shrav\OneDrive\Desktop\Smart Logistics Management & Analytics Platform\Datasets\warehouses.json"
+    r"warehouses.json"
 )
 warehouse = warehouse.where(pd.notna(warehouse), None)
 
@@ -198,7 +198,7 @@ for _, row in warehouse.iterrows():
 # ============================================================
 
 costs = pd.read_csv(
-    r"C:\Users\shrav\OneDrive\Desktop\Smart Logistics Management & Analytics Platform\Datasets\costs.csv"
+    r"costs.csv"
 )
 costs = costs.where(pd.notna(costs), None)
 
